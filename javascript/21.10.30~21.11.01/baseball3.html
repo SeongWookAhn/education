@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+        //computer number
+        var comArr = [];
+        var count;
+        
+        function makeNumber(){
+           //check
+           var rand = Math.floor(Math.random()*9)+1;
+        
+           var isEqual = false;
+        
+           for(var i = 0 ;i<comArr.length ;i++)
+              isEqual = (isEqual || (comArr[i] == rand));
+        
+           if(!isEqual) comArr.push(rand);
+        }
+        
+        function initialize(){
+           count = 0;
+           while(comArr.length < 3){
+              makeNumber();
+           }
+        }
+        
+        function playGame(){
+           var num1 = document.bForm.num1.value;
+           var num2 = document.bForm.num2.value;
+           var num3 = document.bForm.num3.value;
+           var resultArr = check(num1,num2,num3);
+        
+           document.getElementById("result").innerHTML +=  "<br/>" + (++count) + " " + num1 + " " + num2 + " " +num3 + " = " + "s : " + resultArr[0] + " b : " +resultArr[1];
+        
+        }
+        
+        function check(num1,num2,num3){
+           var playerArr = [num1,num2,num3];
+           var scnt = 0 ;
+           var bcnt = 0 ;
+           for(var i=0; i<comArr.length; i++){
+              for(var j=0; j<playerArr.length; j++){
+                 if(playerArr[j] == comArr[i]){
+                    if(i == j)scnt++;
+                    else bcnt++;
+                 }
+              }
+           }
+        
+           return [scnt,bcnt];
+        }
+        
+        </script>
+        </head>
+        <body onload="initialize();">
+           <form name="bForm">
+              <input type="text" name="num1">
+              <input type="text" name="num2">
+              <input type="text" name="num3">
+              <input type="button" onclick="playGame();"/>
+           </form>
+        
+           <div id="result">
+           </div>
+</body>
+</html>

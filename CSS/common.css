@@ -1,0 +1,311 @@
+input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    background-color: purple;
+    color: white;
+}
+
+input[type=number] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    background-color: lightpink;
+    color: darkblue;
+}
+
+#parag {
+    text-align: center;
+    background-color: yellow;
+    color: black;
+}
+
+.aright {
+  text-align: right;
+  background-color: blue;
+  color: white;
+}
+
+.header {
+    text-align: center;
+    background-color: rgb(68, 44, 156);
+    color: rgb(246, 247, 242);
+}
+
+p.header {
+    background-color: blue;
+}
+
+.p1 {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.p2 {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.p3 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.normal {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 40px;
+}
+
+.italic {
+    font-style: italic;
+    font-weight: bold;
+    font-size: 60px;
+}
+
+.oblique {
+    font-style: oblique;
+    font-weight: 1000;
+    font-size: 80px;
+}
+
+a:link {
+    color: red;
+}
+
+a:visited {
+    color: green;
+}
+
+a:hover {
+    color: hotpink;
+}
+
+a:active {
+    color: blue;
+}
+
+.rgbid {
+    background-color: rgb(255, 99, 71);
+}
+
+.hexid {
+    background-color: #ff6347;
+}
+
+.hslid {
+    background-color: hsl(9, 100%, 64%);
+}
+
+.rgbaid {
+    background-color: rgba(255, 99, 71, 0.3);
+}
+
+.hslaid {
+    background-color: hsla(9, 100%, 64%, 0.5);
+}
+
+body {
+    /* background-color: mediumpurple; */
+    /* background-image: url("./test.png");
+    background-repeat: no-repeat;
+    background-size: 1024px 1024px; */
+}
+
+h1 {
+    background-color: coral;
+}
+
+div {
+    font-family: Arial, Helvetica, sans-serif;
+    border: 5px solid green;
+    padding: 10px;
+}
+
+
+
+div.longtext {
+    background-color: lightgray;
+    width: 300px;
+    padding: 50px;
+    border: 15px solid green;
+    margin: 140px;
+}
+
+div.first {
+    opacity: 0.1;
+}
+
+div.second {
+    opacity: 0.3;
+}
+
+div.third {
+    opacity: 0.6;
+}
+
+div.static {
+    position: static;
+    border: 3px solid green;
+}
+
+div.relative {
+    position: relative;
+    width: 400px;
+    height: 200px;
+    /* left : 50px;
+    top: 50px; */
+    border: 5px solid green;
+}
+
+div.absolute {
+    position: absolute;
+    top: 80px;
+    right: 0;
+    width: 200px;
+    height: 100px;
+    border: 5px solid green;
+}
+
+div.fixed {
+    position: fixed;
+    bottom: 0;
+    width: 300px;
+    border: 5px solid pink;
+}
+
+.div1 {
+    float: left;
+    padding: 10px;
+    border: 5px solid green;
+}
+
+.div2 {
+    padding: 10px;
+    border: 5px solid red;
+}
+
+.div3 {
+    float: left;
+    padding: 10px;
+    border: 5px solid green;
+}
+
+.div4 {
+    padding: 10px;
+    border: 5px solid red;
+    clear: left;
+}
+
+img.zindex {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    z-index: 2;
+}
+
+img.lfloat {
+    float: left;
+}
+
+img.rfloat {
+    float: right;
+}
+
+.img1 {
+    float: right;
+}
+
+.img2 {
+    float: left;
+}
+
+.clearfix {
+    overflow: auto;
+}
+
+p {
+    /* background-image: url("./test.png"); */
+    background-color: lightpink;
+    border-left: 10px solid red;
+    padding: 5px;
+    color: red;
+}
+
+p.dotted {
+    border-style: dotted;
+}
+
+p.dashed {
+    border-style: dashed;
+}
+
+p.solid {
+    border-style: solid;
+}
+
+p.double {
+    border-style: double;
+}
+
+p.groove {
+    border-style: groove;
+}
+
+p.ridge {
+    border-style: ridge;
+}
+
+p.inset {
+    border-style: inset;
+}
+
+p.outset {
+    border-style: outset;
+}
+
+p.none {
+    border-style: none;
+}
+
+p.hidden {
+    border-style: hidden;
+}
+
+p.mixed {
+    border-style: dotted dashed solid double;
+}
+
+p.normal {
+    border: 2px solid blue;
+    padding: 5px;
+}
+
+p.round1 {
+    border: 2px solid blue;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+p.round2 {
+    border: 2px solid blue;
+    border-radius: 8px;
+    padding: 5px;
+}
+
+p.round3 {
+    border: 2px solid blue;
+    border-radius: 12px;
+    padding: 5px;
+}
+
+li {
+    display: inline;
+}
+
+a {
+    display: block;
+}
+
+p.ext {
+    display: inline-block;
+}

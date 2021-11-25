@@ -1,0 +1,25 @@
+function 동기      !=        async function 비동기
+반환: return(값)        !=       if true {resolve(promise)}; if false {resolve()}
+
+Promise - (True callback, False callback)
+
+async function() = var 변수 == True callback
+Promise의 True callback == .then()
+
+Promise의 False callback == .catch()
+- resolve false 값이 있을때만 가능
+
+async 사용 이유는 비동기처리가 반드시 필요할때 
+== callback으로 server side에서 특정 함수가 계속 돌아가야할때
+(ex 로그인)
+
+fs.promises == 비동기 처리를 위해 사용
+
+.await 비동기 처리 완료 될때까지 대기 == async 끝날때까지 대기하고 True callback 반환
+
+
+
+axios require 안되는 이유는 nodejs 경로가 html에서 접근이 안되기 때문
+
+axios
+HTTP Promise API(== async await등)를 활용하는 통신 라이브러리입니다.

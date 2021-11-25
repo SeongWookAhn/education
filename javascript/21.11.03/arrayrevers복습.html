@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="myFunction()">Click revers</button>
+    <div id="res1"></div>
+    <div id="res2"></div>
+    <div id="res3"></div>
+    <script>
+        const fastFood = ["Burger", "Pizza", "Chicken"];
+        document.getElementById("res1").innerHTML = fastFood;
+
+        function myFunction() {
+            fastFood.reverse(); // 배열 순서를 반대로
+            document.getElementById("res2").innerHTML = fastFood;
+            fastFood.sort(); // 배열 순서를 문자열의 유니코드 코드 포인트로 정렬
+            document.getElementById("res3").innerHTML = fastFood;
+        }
+    </script>
+</body>
+</html>

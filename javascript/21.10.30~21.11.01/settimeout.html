@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="result"></div>
+    <script>
+        // setTimeout(function() { myFunction("Hello World")}, 5000);
+
+        // function myFunction(value) {
+        //     document.getElementById('result').innerHTML = value;
+        // }
+        let text = "";
+        function first(){
+            setTime(function(){
+            text += "first" + "<br>";
+        document.getElementById("result").innerHTML = text;
+            }, 1000);
+        }
+
+        function second() {
+            text += "second" + "<br>";
+            document.getElementById("result").innerHTML = text;
+        }
+
+        first();
+        second();
+    </script>
+</body>
+</html>

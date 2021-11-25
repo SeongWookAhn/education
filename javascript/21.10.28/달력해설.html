@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function makeCalender(y,m){ 
+            let calender=[]; 
+            let newCalender=[]; 
+            let start = new Date(y,m-1,1);
+            // console.log(start); 
+            let end = new Date(y,m,0);
+            // console.log(end); 
+            let dayOfWeek=start.getDay(); 
+            let endDay =end.getDate();
+            let prevMonth = new Date(y,m-1,0);
+            // console.log(prevMonth); 
+            let prevEndDay=prevMonth.getDate();
+        
+            //Date(y,m,d) month부분이 이상하게 찍힐 때가 있음. console.log로 확인. 
+            //배열에 m월 1일부터 마지막 날 까지 넣는다. 
+            for(let i=0; i<endDay; i++){
+                calender[i]=String(i+1).padStart(2,0); 
+            }
+            // 배열 앞쪽에 이전 달의 마지막 날짜부터 -1하면서 차례대로 넣는다. 
+            for(let j=0; j<dayOfWeek; j++){
+                // calender.unshift(String(prevEndDay));
+                // prevEndDay--; 
+                calender.unshift(" "); //빈칸 넣기 (비어있는 부분 숫자가 들어감 앞부분)
+            }
+            // 달력이 꽉 차지 않으면 마지막 날에 다음 달 달력도 넣는다. 
+            if(calender.length%7!=0){ 
+                nextDay =7-calender.length%7; 
+                for(let k=1; k<=nextDay; k++){
+                    // calender.push(String(k).padStart(2,0)); 
+                    calender.push("  ");// 빈칸 넣기 (비어있는 부분 숫자가 들어감 뒷부분)
+                }
+            }
+            // 이전달 이번달 다음달의 날짜가 모두 포함된 배열(calender)을 7칸씩 나눠서 새로운 배열(newCalender)에 담아준다. 
+            for(let l=0; l<calender.length/7; l++){
+                newCalender[l]='';
+                for(let n=(l*7); n<(l*7)+7; n++){ 
+                    newCalender[l]+=calender[n]+" "; 
+                }
+            }
+            //콘솔창에 찍기. 
+            console.log(y+'년'+m+'월');
+            console.log("일 월 화 수 목 금 토")
+            for(m=0; m<newCalender.length; m++){
+                console.log(newCalender[m]);
+            }
+            console.log("");
+        }
+    makeCalender(2021,5); 
+    makeCalender(2021,9); 
+    </script> 
+</body>
+</html>
+
+https://lhoiktiv.tistory.com/66

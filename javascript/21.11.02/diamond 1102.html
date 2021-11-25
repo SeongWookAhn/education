@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>다이아몬드</h1>
+    <script>
+        // 1. 배열 선언
+        // 2. 첫줄에 문자c가 들어가게 설정
+        // 3. 두번째 줄에 문자bcd가 들어가게 설정
+        // 4. 세번째 줄에 문자 abcde가 들어가게 설정 
+        // 5. 1-4를 반복하여 다이아몬드 모양으로 출력
+        var res = new Array("a", "b", "c", "d", "e")    // 1. 배열 선언
+        var arr = [];
+            for (var i = 0; i < parseInt(res.length/2) + 1; i++) {
+                let str = "";
+                let j = i*2+1; // 문자 갯수
+                let k = (res.length-j)/2 // 공백 갯수
+            
+                for (var x = 0; x < k+j; x++) {  // x : 첫줄에 [blank, blank, c]로 출력되게 하려함
+                    if (x < k) { // x가 k보다 작을경우
+                        str += " "; 
+                    }
+                    else {
+                        str += res[x];
+                    }
+                }    
+                console.log(str)
+                arr.push(str); // 출력한 수를 arr 배열에 순서대로 추가
+            }
+            
+            for (var i = 0; i < parseInt(res.length/2) + 1; i++) {
+                let str1 = "";
+                let j = i*2+1; // 문자 갯수
+                let k = (res.length-j)/2 // 공백 갯수
+            
+                for (var x = 0; x < k+j; x++) {  // x : 첫줄에 [blank, blank, c]로 출력되게 하려함
+                    if (x < k) { // x가 k보다 작을경우
+                        str1 += " "; 
+                    }
+                    else {
+                        str1 += res[x];
+                    }
+                }    
+                console.log(str1)
+                arr.push(str1); // 출력한 수를 arr 배열에 순서대로 추가
+            }
+                 // arr [c, bcd, abcde]가 들어가있는 상태
+                 // i값이 abcde보다 작은경우 배열 순서를 반대로 돌아가서 
+                 // bcd, c 순으로 다시 배열하게 함
+                 //   c
+                 //  bcd
+                 // abcde
+                 //  bcd
+                 //   c 를 console창에 출력할 예정
+            
+                 for (var i = parseInt(res.length / 2) - 1; i >= 0; i--) {
+                    let str1 = "";
+                    let j = i * 2 + 1; // 문자 갯수
+                    let k = (res.length - j) / 2 // 공백 갯수
+
+                        for (var x = 0; x < k + j; x++) { 
+                            if (x < k) { 
+                                str1 += " ";
+                             } else {
+                                str1 += res[x];
+                             }
+                        }
+                    console.log(str1)
+                    arr.push(str1);
+                }
+    </script>
+</body>
+</html>

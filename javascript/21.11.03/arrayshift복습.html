@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="myFunction()">Click shift</button>
+    <div id="res1"></div>
+    <div id="res2"></div>
+    <div id="res3"></div>
+
+    <script>
+        const bookStyle = ["E-book", "Paper-book", "book", "Screen-book"];
+        document.getElementById("res1").innerHTML = bookStyle;
+
+        function myFunction() {
+            document.getElementById("res2").innerHTML = bookStyle.shift(); // 첫번째 요소를 제거 후 반환
+            document.getElementById("res3").innerHTML = bookStyle;
+        }
+    </script>
+</body>
+</html>

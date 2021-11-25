@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array revers method</title>
+</head>
+<body>
+    <h1>Array revers method</h1>
+    <button onclick ="myFunction()">Click</button>
+    <div id="result"></div>
+    <div id="sortres"></div>
+    <div id="reversres"></div>
+    <script>
+        const frutis = ["Bannana", "Orange", "Apple", "Grape"];
+        document.getElementById('result').innerHTML = frutis;
+
+        function myFunction() {
+            frutis.sort();
+            document.getElementById('sortres').innerHTML = frutis;
+            frutis.reverse();
+            document.getElementById('reversres').innerHTML = frutis;
+        }
+    </script>
+</body>
+</html>

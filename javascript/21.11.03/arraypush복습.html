@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="myFunction()">Click Me!!</button>
+    <div id="result1"></div>
+    <div id="result2"></div>
+    
+    <script>
+        const Animals = ["Tiger", "Giraffe", "Lion", "Falcon"]
+        document.getElementById("result1").innerHTML = Animals;
+
+        function myFunction() {
+            document.getElementById("result1").innerHTML = Animals.push("Mongkey"); // 배열 마지막부분에 추가
+            document.getElementById("result2").innerHTML = Animals;
+        }
+    </script>
+</body>
+</html>

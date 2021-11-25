@@ -1,0 +1,75 @@
+.center {
+    margin: auto;
+    width: 80%;
+    border: 5px solid green;
+    padding: 10px;
+    text-align: center;
+}
+
+.center2 {
+    padding: 70px 0;
+    border: 5px solid green;
+}
+
+div {
+    background-color: lemonchiffon;
+    color: limegreen;
+    padding: 25px;
+    text-align: center;
+}
+
+div:hover {
+    background-color: purple;
+}
+
+img {
+    display: block;
+    margin: auto;
+}
+
+div > p {
+    background-color: blue;
+}
+
+div ~ p {
+    background-color: yellow;
+}
+
+a:link {
+    color: red;
+}
+
+a:visited {
+    color: green;
+}
+
+a:hover {
+    color: hotpink;
+}
+
+a:active {
+    color: blue;
+}
+
+input:focus {
+    background-color: purple;
+}
+
+input:checked {
+    width: 50px;
+    height: 50px;
+}
+
+input[type=text]:enabled {
+    background-color: blueviolet;
+    color: white;
+}
+
+input[type=text]:disabled {
+    background-color: lightgray;
+    color: black;
+}
+
+p i:first-child {
+    color: blue;
+}

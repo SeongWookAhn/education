@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>숫자야구</title>
+</head>
+<body>
+  <h1>숫자야구</h1>
+    <form id="form">
+      <input type="text" id="input">
+      <button>확인</button>
+    </form>
+    <div id="result"></div>
+<script>
+  function answer1(baseball) {
+    let answer = 0;
+
+    // 각 자리수마다 다른 수가 오게 설정
+    let defNums = [];
+    for (let i = 1; i <=9; i++) {
+      for (let j = 0; j <=9; j++) {
+        if (i === j)
+          continue;
+
+        for (let k = 0; k <=9; k++) {
+          if (j === k || i === k)
+            continue;
+
+          defNums.push(""+i+j+k);
+        }
+      }
+    }
+  
+    for (let i = 1; i < defNums.length; i++) {
+      let offNums = true;
+
+      for (let j = 0; j < baseball.length; j++) {
+        let str = baseball[j][0].toString();
+        // 스트라이크, 볼 확인
+        let strike = 0;
+        let ball = 0;
+
+        for (let k = 0; k < str.length; k++) {
+          if (str[k] === defNums[i][k])
+          strike++;
+          else {
+            if (str.indexOf(defNums[i][k]) !== -1)
+              ball++;
+          }
+        }
+        if (strike === baseball[j][1] && ball === baseball[j][2])
+          continue;
+        else {
+          offNums = false;
+          break;
+        }
+      }
+
+      if (offNums)
+      answer++;
+    }
+
+    return answer;
+  }
+  console.log(answer1([[123, 1, 1], [356, 1, 0], [327, 2, 0], [489, 0, 1]]));
+  document.getElementById("result").innerHTML.value
+</script>
+</body>
+</html>

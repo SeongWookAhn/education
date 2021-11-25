@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="result1"></div>
+    <div id="result2"></div>
+    <div id="result3"></div>
+
+    <script>
+        const colors = ["red", "aqua", "coralblue", "orangered", "whitegray"]
+
+        document.getElementById("result1").innerHTML = colors;
+        document.getElementById("result2").innerHTML = colors.pop(); // 배열의 마지막 요소를 제거 후 반환
+        document.getElementById("result3").innerHTML = colors;
+    </script>
+</body>
+</html>

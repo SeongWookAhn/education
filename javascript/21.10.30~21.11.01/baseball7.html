@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>숫자야구</h1>
+    <form id="form">
+      <input type="text" id="input">
+      <button>확인</button>
+    </form>
+    <div id="result1"></div>
+    <div id="result2"></div>
+    <div id="result3"></div>
+    <script>
+    function baseball() {
+      let pNums = [];
+      for (let n = 0; n < 9; n++) { //9번반복
+          pNums.push(n + 1);
+      }
+    }
+    
+    const answer = []
+    for (let n = 0; n < 3; n++) {
+      const index = Math.floor(Math.random() * pNums.length);
+      answer.push(pNums[index]);
+      pNums.splice(index, 1);
+    }
+
+    const tries = [];
+    function checkInput(input) {
+      
+    }
+    </script>
+</body>
+</html>
+
+
+https://m.blog.naver.com/PostView.naver?isHttpsRedirect=true&blogId=gnqo7598&logNo=221259567775

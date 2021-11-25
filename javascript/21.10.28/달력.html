@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    function makeCalender(y,m){ 
+        let calender=[]; 
+        let newCalender=[]; 
+        let start = new Date(y,m-1,1);
+        let end = new Date(y,m,0);
+        let dayOfWeek=start.getDay(); 
+        let endDay =end.getDate();
+        let prevMonth = new Date(y,m-1,0);
+        let prevEndDay=prevMonth.getDate();
+        
+        for(let i=0; i<endDay; i++){
+            calender[i]=String(i+1).padStart(2,0); 
+        }
+        for(let j=0; j<dayOfWeek; j++){
+            calender.unshift("  "); 
+        }
+        if(calender.length%7!=0){ 
+            nextDay =7-calender.length%7; 
+            for(let k=1; k<=nextDay; k++){
+                calender.push(" ");
+            }
+        }
+        for(let l=0; l<calender.length/7; l++){
+            newCalender[l]='';
+            for(let n=(l*7); n<(l*7)+7; n++){ 
+                newCalender[l]+=calender[n]+" "; 
+            }
+        }
+        console.log(y+'년'+m+'월');
+        console.log("일 월 화 수 목 금 토")
+        for(m=0; m<newCalender.length; m++){
+            console.log(newCalender[m]);
+        }
+    }
+    makeCalender(2021,5); 
+    makeCalender(2021,9); 
+</script> 
+</body>
+</html>
